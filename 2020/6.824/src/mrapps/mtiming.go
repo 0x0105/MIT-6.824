@@ -7,7 +7,7 @@ package main
 // go build -buildmode=plugin mtiming.go
 //
 
-import "../mr"
+import "mit/mr"
 import "strings"
 import "fmt"
 import "os"
@@ -79,7 +79,7 @@ func Map(filename string, contents string) []mr.KeyValue {
 }
 
 func Reduce(key string, values []string) string {
-	//n := nparallel("reduce")
+	// n := nparallel("reduce")
 
 	// sort values to ensure deterministic output.
 	vv := make([]string, len(values))
